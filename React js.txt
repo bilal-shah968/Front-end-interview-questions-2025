@@ -1,0 +1,246 @@
+                                                        Basic Questions
+
+Q1: What is React, and why is it used?
+Ans:
+  React ek JavaScript library hai jo interactive aur fast UI banane ke liye use hoti hai. Yeh single-page applications (SPA) aur component-based architecture ko support karti hai.
+
+Q2: What are the main features of React?
+Ans:
+   Component-based architecture                 (UI ko chhoti chhoti components mein todta hai)
+   Virtual DOM                                   (fast rendering ke liye)
+   One-way data binding                         (data sirf ek direction mein flow karta hai)
+    React Hooks                                 (functions ka use kar ke state aur lifecycle manage kar sakte hain)
+    Server-side rendering                       (SSR) & Static site generation (SSG) (Next.js ke saath).
+
+Q3: What is JSX? How is it different from HTML?
+Ans: 
+     JSX ek JavaScript syntax extension hai jo HTML jaisa lagta hai lekin React components ke andar likha jata hai.
+
+Difference from html to jsx:
+
+JSX mein JavaScript expressions use ho sakti hain ({} braces ke andar)
+HTML mein directly DOM manipulate hota hai, JSX mein nahi
+JSX class ki jagah className use karta hai.
+
+Q4: Explain the virtual DOM and how it improves performance.   
+Ans:
+   Virtual DOM ek lightweight copy hoti hai real DOM ki. Jab koi change hota hai, React pura DOM update nahi karta, balki sirf jo change hua hai usko update karta hai, isse app fast aur optimized rehti hai.
+
+Q5: What is the difference between functional and class components?  
+Ans: 
+  Functional Components →
+    Simple JavaScript functions hote hain jo UI return karte hain. Ye fast aur lightweight hote hain.
+
+Class Components → 
+ES6 classes hote hain jo state aur lifecycle methods support karte hain. Lekin ab Hooks ke baad functional components preferred hain.
+
+                            
+                                                          React Hooks
+Q6: What are React Hook and were they introduced?
+Ans:
+ React Hooks aik functional component ke andar state aur lifecycle features use karne ka tareeqa hai. Yeh class components ka alternative hain, jisme this ka masla hota tha. Hooks ko React 16.8 me introduce kiya gaya taake functional components powerful aur simple ho sakein.
+
+Q7: Explain the useState hook with an example.
+Ans:
+ useState aik hook hai jo component ke andar state manage karne ke liye use hota hai.
+
+Q8: How does the useEffect hook work? What are its use cases?
+Ans:
+ useEffect side effects handle karne ke liye use hota hai jaise API calls, event listeners, timers, subscriptions, etc.
+
+Q9: What is the difference between useEffect and lifecycle methods in class components?
+
+Ans: Class Lifecycle Methods	                              useEffect Hook
+     componentDidMount	                                useEffect(() => {...}, [])
+     componentDidUpdate	                                useEffect(() => {...}, [dependency])
+     componentWillUnmount                          	        useEffect(() => { return () => {...}; }, [])
+
+Q10:  What is useRef, and how can it be used in React?
+Ans: 
+   useRef aik hook hai jo DOM elements ko access karne aur values ko preserve karne ke liye use hota hai bina re-render karaye.
+
+Q11:  What is useCallback, and when should you use it?
+Ans: 
+useCallback functions ko cache karta hai taake unnecessary function recreation na ho.
+
+
+                                                React Components & Props 
+                                                         
+Q12: What are props in React? How are they different from state?
+Ans: 
+  Props (Properties) woh data hain jo ek component doosray component ko bhejta hai. Ye read-only hote hain, yani inko child component change nahi kar sakta.
+
+State:  ek component ka apna data hota hai jo component ke andar hi update ho sakta hai.
+
+Q13: How do you pass data between parent and child components?
+Ans: 
+  Parent component props ka use karke child component ko data bhej sakta hai
+ 
+For Example: 
+
+function Parent() {
+  return <Child name="Hasnaijn" />;
+}
+
+function Child(props) {
+
+  return <h1>Hello, {props.name}!</h1>;
+}
+
+
+Q14: What are controlled and uncontrolled components in React?
+Ans: Controlled Component →     Jo apni value React ke state se control kare
+     Uncontrolled Component →   Jo apni value DOM ke andar store kare (ref ke zariye)
+
+Q15: What is prop drilling, and how can you avoid it?
+Ans: Jab bohot sare components ek dusray ko props pass karte hain bina kisi zaroorat ke, to Prop Drilling hoti ha.
+
+Q16: What is context API, and how does it help in state management?
+Ans: Context API React ka built-in feature hai jo prop drilling ka issue solve karta hai. Ye ek global state provide karta hai jo kisi bhi component say directly access ho sakta ha.
+
+
+                                               State Management in React
+
+Q17: What is Redux, and how does it work in React?
+Ans: Redux aik state management library hai jo React applications ka global state manage karti hai. Yeh aik single source of truth ka concept follow karti hai, jiska matlab hai keh sari application ki state aik central store may hoti hai.
+
+Redux ka workflow kuch is tarah hota hai:
+
+Store:           Yeh aik central state rakhta hai.
+Actions:         Yeh plain JavaScript objects hotay hain jo store ko batatay hain keh kya change karna hai.
+Reducers:        Yeh pure functions hotay hain jo state ko update karte hain based on actions.
+Dispatch:        Iska use action bhejnay kay liye hota hai.
+Selectors:       Yeh store say data retrieve karne ke liye use hotay hain.
+Example:         Agar ek user login kar raha hai to Redux store user ka data update karega, aur poori app ko access day ga bina prop drilling kay.
+
+
+Q18: Explain the difference between Redux and React Context API.
+Ans: Redux: 
+tab use karna chahiye jab state bohot bari aur complex ho, jaise authentication, shopping cart, dashboard states.
+
+React Context API: 
+ tab use karna chahiye jab state choti ho, jaise theme, user preferences.
+
+Q19: What are the core principles of Redux?
+Ans: Redux teen core principles follow karta hai:
+
+Single Source of Truth –                Sari state aik store may hoti hai, taake easy debugging ho.
+State is Read-Only –                    State ko directly modify nahi kar sakte, balki sirf actions bhej sakte hain.
+Changes Happen via Pure Functions –     Reducers sirf actions kay basis pe new state return karte hain, jo predictable hoti hai.
+
+Q20: What is the use of useReducer in React?
+Ans: useReducer React ka aik hook hai jo Redux ki tarah state manage karne may madad deta hai, magar sirf choti applications kay liye.
+
+Q21: What are the advantages of using Zustand or Recoil over Redux?
+Ans:
+Feature	                      Redux	                 Zustand	                     Recoil
+Boilerplate Code:	      Zyada	                  Kam	                              Kam
+Performance:	              Achhi	               Aur better	                Best for atomic state
+Setup Complexity:	       High	                  Low	                             Moderate
+Usage:	                 Large applications	     Small/Medium apps	                Fine-grained state updates
+                                 
+
+
+                                                    React Performance Optimization
+
+
+Q22: What is the difference between useMemo and React.memo?
+Ans:
+    Feature	                      useMemo	                                                                 React.memo
+Purpose	                     Expensive calculations optimize karta hai	                               Useless re-renders rokta hai
+Use on	                     Functions ya calculations	                                                 Functional Components
+Example	                  useMemo(() => computeHeavy(), [dependencies])	                               React.memo(MyComponent)
+Dependency	                  Dependency array hoti hai	                                         Props check hoti hain
+
+
+
+Q23: What are key props in React lists, and why are they important?
+Ans:
+    Jab React koi list render karta hai, to har item ko uniquely identify karne ke liye "key" prop use karta hai.
+
+Q24: What are lazy loading and code splitting in React?
+Ans:
+       Lazy Loading:                React sirf tab component load karega jab zaroori ho. Is se faster loading time milega.
+       Code Splitting:                Poori app ek saath load karne ke bajaye, chunks me todna, taake fast rendering ho.
+
+Q25: How does React Suspense work?
+Ans:
+   React Suspense async components ko handle karne ke liye use hota hai, jese lazy loading ya data fetching.
+Agar koi component abhi tak load nahi hua, to Suspense temporary fallback UI dikhata hai.
+
+                                     
+                                               React Routing & Navigation
+
+Q26: What is React Router, and how does it work?
+Ans:
+   React Router aik JavaScript library hai jo React applications kay andar client-side routing provide karti hai. Yeh bina page reload kiye different pages ya components load karne ki sahulat deti hai.
+                                  
+
+Q27: What is the difference between BrowserRouter and HashRouter?
+Ans:
+   BrowserRouter:      Jab aapko clean URLs aur better SEO chahiye.
+    HashRouter:       Jab server configuration nahi karni ya static hosting (GitHub Pages) use karna ho.
+
+
+Q28: How do you pass parameters to routes in React Router?
+Ans: 
+  React Router Dynamic Routing support karta hai, jisme hum parameters pass kar sakte hain.
+
+Q29: How do you implement nested routes in React Router?
+Ans: 
+   Jab humein ek route ke andar aur routes define karne hoon, to nested routing use hoti hai.
+
+
+
+
+
+                                                       Advanced React Concepts
+
+
+Q30: What is Server-Side Rendering (SSR) in React?
+Ans:
+  Jab React ka HTML server pe generate hota hai aur browser ko bheja jata hai, isay SSR kehtay hain. 
+
+Q31: What is hydration in React?
+Ans:
+  Hydration ka matlab hai server se aaye HTML ko React ke interactive components mein convert karna. Iske bina click events, forms ya state updates kaam nahi karte.
+
+Q32: What is React Fiber & how does it improve performance?
+Ans: 
+   React Fiber ek new rendering engine hai jo 2017 mein aya tha. Yeh React ko fast banata hai kyunki:
+
+   Pauses & resumes rendering                              (blocking nahi karta)
+
+   Smooth animations aur better UI updates deta hai
+
+   Concurrent mode ko support karta hai
+
+
+Q33: What are React Portals & when to use them?
+Ans: 
+    React Portals ka use tab hota hai jab aap kisi component ko DOM ke kisi aur part mein render karna chahain.
+
+Example:
+
+Modals / Popups              (jo body ke andar render hote hain)
+Tooltips / Dropdowns         (jo kisi container se bahar dikhne chahiyein)
+
+
+Q34: How do you handle API calls in React?
+Ans: 
+   React may API calls fetch ya axios ka use kar kay ki jati hain. API call mostly useEffect hook ke andar hoti hai, takay component render hone par data    fetch ho jaye.
+
+Q35:  What is the difference between Axios and Fetch API?
+Ans:
+   Axios better hai kyunki error handling, JSON conversion, aur request cancellation ka support deta hai.
+
+   Fetch lightweight hai, lekin error handling aur syntax complex hai.
+
+
+Q36: What is  Constraints in React?
+Ans: 
+  React me constraints ka matlab restrictions ya rules hain jo component development ke dauraan follow karne zaroori hote ha 
+
+Q37: What is a Hook in React?
+Ans: Hooks React ke special functions hain jo functional components ke andar state aur lifecycle features ko use karne dete hain bina class components likhne ke
+

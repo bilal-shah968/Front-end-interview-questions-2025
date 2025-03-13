@@ -1,0 +1,70 @@
+                                              HTML Interview Questions – Short Answers
+Q1: What is HTML and what is its basic structure?
+Ans: 
+   HTML (HyperText Markup Language) aik markup language hai jo web pages bananay ke liye use hoti hai.
+
+    Basic Structure:
+
+html
+Copy
+Edit
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+</body>
+</html>
+
+
+Q2: What is Semantic HTML? Give 5 examples.
+Ans: 
+    Semantic HTML woh tags hain jo content ka meaning batatay hain.
+     E.g : <header>, <nav>, <article>, <section>, <footer>
+
+Q3: What is the use of <meta> tag?
+Ans:
+   Meta tag page ki information (description, keywords, viewport) define karta hai. 
+e.g:
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+Q4: What is the difference between HTML5 and HTML4?
+Ans: 
+   HTML5 new features like <video>, <audio>, <canvas>, local storage, aur semantic tags support karta hai.
+
+   HTML4 me yeh features nahi thay.
+
+
+Q5: What is the difference between Inline, Block, and Inline-Block elements?
+Ans:
+     Inline: Sirf jitni width zaroori ho (e.g., <span>, <a>).
+     Block: Pura row cover karta hai (e.g., <div>, <p>).
+     Inline-Block: Inline behave karta hai, lekin width aur height set kar sakte hain (e.g., <button>, <img>).
+
+
+Q6: What are HTML Forms? What are different form elements?
+Ans: 
+   Forms user input collect karne ke liye use hoti hain.
+  Form Elements: <input>, <textarea>, <select>, <button>, <label>.
+
+Q7: What is the difference between Local Storage and Session Storage?
+Ans: 
+    Local Storage: Data permanently store hota hai, tab ya browser band hone par bhi delete nahi hota.
+
+    Session Storage: Sirf current session tak data store hota hai, browser band karne se delete ho jata hai.
+
+Q8: What is the use of the <iframe> tag and what are its security risks?
+Ans: Use: Doosri websites ya pages ko embed karne ke liye (e.g., YouTube videos).
+
+     Security Risk: Clickjacking aur malicious scripts ka risk hota hai.
+
+Q9: What is the role of HTML in Progressive Web Apps (PWA)?
+Ans: 
+    HTML structure provide karta hai, jo PWA me fast aur responsive experience banane ke liye zaroori hai.
+
+   Is HTML SEO-friendly? Which tags are important for SEO?
+    Haan, semantic HTML SEO-friendly hota hai.
+    Important SEO tags: <title>, <meta description>, <h1>-<h6>, <alt>, <a> (with proper href).

@@ -1,0 +1,50 @@
+                                                        CSS Interview Questions with Short Answers 
+
+Q1. How many types of CSS selectors are there? Give some examples.
+Ans:
+ Types: Universal (*), Type (h1), Class (.class), ID (#id), Attribute ([type="text"]), Pseudo-class (:hover), Pseudo-element (::after), Group (h1, h2),  Child (div > p), Descendant (div p), Adjacent (h1 + p), General Sibling (h1 ~ p).
+
+Q2. How do specificity and inheritance work in CSS?
+Ans: 
+ Specificity: ID > Class > Element. Agar #id aur .class dono same element per apply hon to ID wala rule apply hoga.
+ Inheritance: Kuch properties (color, font-family) inherit hoti hain, magar kuch nahi (margin, padding).
+
+Q3. What is the difference between Flexbox and Grid?
+Ans:
+   Flexbox: 1D layout (row ya column). display: flex;
+   Grid: 2D layout (row aur column). display: grid;
+
+Q4. What is the difference between CSS animations and transitions?
+Ans:
+ Animations: Multiple keyframes (@keyframes).
+ Transitions: Sirf start aur end state hoti hai. (transition: all 0.3s ease;).
+
+Q5. What are Media Queries? How do they help in responsive design?
+Ans:
+   Media Queries: @media (max-width: 768px) { ... } Responsive layout banane ke liye screen size check karne ka tareeqa.
+
+Q6. What is the difference between SCSS and CSS?
+Ans:
+   SCSS: Advanced CSS (variables, nesting, mixins, inheritance).
+   CSS: Normal styling rules.
+
+Q7. What are CSS pseudo-classes and pseudo-elements?
+Ans:
+  Pseudo-class: Special state (:hover, :focus).
+  Pseudo-element: Element ka part (::before, ::after).
+
+Q8. What is the difference between CSS positioning properties (static, relative, absolute, fixed, sticky)?
+Ans:
+   Static: Default.
+   Relative: Normal position se move kar sakta hai.
+   Absolute: Parent ke relative position leta hai.
+   Fixed: Screen ke relative hota hai.
+   Sticky: Scroll hone par sticky ho jata hai.
+
+Q9. What is the use of the z-index property?
+Ans: 
+    z-index: Layers manage karne ke liye (z-index: 10; Higher value wala upar rahega).
+
+Q10. What is BEM methodology in CSS and why is it important?
+Ans:
+    BEM (Block, Element, Modifier): Naming convention (.button--primary). Reusable aur maintainable CSS likhne ke liye important hai.

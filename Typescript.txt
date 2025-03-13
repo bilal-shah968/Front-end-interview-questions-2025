@@ -1,0 +1,49 @@
+                                                         TypeScript Interview Questions & Answers
+Q1. What is TypeScript, and how is it different from JavaScript?
+Ans:
+  TypeScript ek strongly typed version hai JavaScript ka, jo compile-time errors detect kar sakta hai, jabkay JavaScript me errors runtime par miltay     hain.
+
+
+Q2: What is the difference between Interfaces and Types in TypeScript?
+Ans:
+   Interfaces sirf object structures define karti hain aur extend ho sakti hain, jabkay Types objects ke ilawa unions, intersections, aur primitive types      bhi define kar sakti hain.
+
+Q3. What is the role of Generics in TypeScript?
+Ans:
+   Generics reusable code likhnay me madad detay hain jo kisi bhi data type ke sath kaam kar sakay, lekin type safety ko maintain karta hai.
+
+Q4: What is the use of Enum and Union Types in TypeScript?
+Ans: 
+    Enum predefined constant values define karne ke liye hota hai.
+
+    Union Types aik variable ko multiple types accept karne deta hai.
+
+Q5. What is the difference between readonly and const in TypeScript?
+Ans:
+   Readonly objects ke properties ko change hone se rokta hai.
+
+   const aik variable jo  reassigned hone se rokta hai.
+
+Q6. What is the use of the tsconfig.json file in TypeScript?
+Ans:
+   tsconfig.json aik TypeScript project ka configuration file hota hai jo compiler options aur settings define karta hai.
+
+Q7. What are Utility Types in TypeScript? (Partial, Pick, Omit, Required)
+Answer:
+
+Partial<T> →                         Makes all properties optional.
+Pick<T, K> →                         Selects specific properties from an object.
+Omit<T, K> →                         Removes specific properties from an object.
+Required<T> →                        Makes all properties mandatory.
+
+          Utility Types predefined helpers hain jo objects ki properties ko modify karne ke liye use hotay hain.
+
+Q8: What is the role of Modules and Namespaces in TypeScript?
+Ans:
+    Modules alag files me code organize karne ke liye hotay hain.
+
+    Namespaces aik hi file ke andar code structure improve karne ke liye use hotay hain.
+
+Q10. What are Decorators in TypeScript, and what are they used for?
+Ans:
+    Decorators TypeScript me metadata add karne ke liye use hotay hain, aur ye mostly Angular framework me istemal hotay hain.

@@ -1,0 +1,62 @@
+                                                         Tailwind CSS Interview Questions & Answers
+                  
+Q1. What is Tailwind CSS and what kind of framework is it?
+Answer: 
+  Tailwind CSS ek utility-first CSS framework hai jo direct classes provide karta hai taake custom designs bina additional CSS likhay ban sakein.
+
+Q2. What does Utility-First CSS mean?
+Answer:
+  Utility-first CSS ka matlab hai ke Tailwind predefined classes provide karta hai jo specific CSS properties ko directly apply kartay hain, jaisay text-  center, bg-blue-500, flex, p-4, etc.
+
+Q3. What is the difference between Tailwind and Bootstrap?
+Answer:
+   Bootstrap ek component-based framework hai jo predefined components (buttons, navbars, modals) provide karta hai.
+
+   Tailwind CSS utility classes ka use karta hai taake fully customizable UI bina extra CSS likhay ban sake.
+
+Q4. How can we customize Tailwind classes?
+Answer: 
+      tailwind.config.js file me theme extend kar kay new colors, spacing, fonts, ya custom utilities add ki ja sakti hain.
+
+Q5. How to implement Dark Mode in Tailwind CSS?
+Answer:
+     Tailwind me dark: modifier use kar kay dark mode enable kiya jata hai.
+     Example:
+     bg-white dark:bg-gray-900 text-black dark:text-white
+     Aur tailwind.config.js me darkMode: "class" set karna hota hai.
+
+Q6. What is the purpose of the Tailwind CSS configuration file (tailwind.config.js)?
+Answer:
+     Ye file Tailwind ko customize karne ke liye hoti hai, jisme custom themes, colors, breakpoints, aur additional utilities define kiye jate hain.
+
+Q7. What is the @apply directive and when should it be used?
+Answer:
+     @apply directive ka use multiple Tailwind classes ko ek custom CSS class me combine karne ke liye hota hai.
+    Example:
+   .btn {
+   @apply bg-blue-500 text-white px-4 py-2 rounded;
+   }
+
+Q8. How to integrate Tailwind CSS with React or Next.js?
+Answer:
+     npm install -D tailwindcss postcss autoprefixer
+     npx tailwindcss init -p
+     tailwind.config.js file ko customize karo
+
+     index.css file me Tailwind directives add karo:
+
+      @tailwind base;
+      @tailwind components;
+     @tailwind utilities;
+     React/Next.js me directly Tailwind classes use karo.
+
+Q9. What is the role of Purge in Tailwind CSS for performance optimization?
+Answer: 
+      purge feature sirf used classes ko final CSS file me rakhta hai aur unused CSS ko remove kar deta hai, jis se file size chhoti hoti hai aur website       fast load hoti hai.
+
+Q10. How does Tailwind’s Flexbox and Grid system work?
+Answer:
+
+     Flexbox: flex, justify-center, items-center jaisi classes use kar kay layout flexible banaya jata hai.
+
+     Grid: grid, grid-cols-3, gap-4 jaisi classes use kar kay column-based layouts banaye jate hain.
